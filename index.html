@@ -27,57 +27,104 @@
         </div>
         <nav class="menu">
             <ul>
-                <li><a href="">EPISODIOS</a></li>
-                <li><a href="">NOSOTROS</a></li>
-                <li><a href="">ENTREVISTAS</a></li>
-                <li><a href="">TÓPICOS</a></li>
+                <li><a href="#episodios">EPISODIOS</a></li>
+                <li><a href="#nosotros">NOSOTROS</a></li>
+                <li><a href="#entrevistas">ENTREVISTAS</a></li>
+                <li><a href="#topicos">TÓPICOS</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Hello <span id="world">world</span> pale blue dot<span id="dot">.</span></h1>
-    <p>Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
-    <input class="button" type="button" value="CONOCÉ MÁS">
-    <main>
-        <h2>Episodios</h2>
-        <div class="main-bg"></div>
 
-        <section class="temas">
-            <h2>Algunos de nuestros temas</h2>
-            <div class="theme">
-                <img src="/images/icon1.svg" alt="trabajo-remoto">
-                <h3>Trabajo Remoto</h3>
-            </div>
-            <div class="theme">
-                <img src="/images/icon2.svg" alt="repensando-la-programacion">
-                <h3>Repensando la programación</h3>
-            </div>
-            <div class="theme">
-                <img src="/images/icon3.svg" alt="baces-del-codigo">
-                <h3>Bases del codigo</h3>
-            </div>
-            <div class="theme">
-                <img src="/images/icon4.svg" alt="seguridad-informatica">
-                <h3>Seguridad informatica</h3>
+
+    <main>
+        <section class="top">
+            <h1>Hello <span id="world">world</span> pale blue dot<span id="dot">.</span></h1>
+            <p></p>
+
+            <a href="#nosotros">
+                <input class="button" type="button" value="CONOCÉ MÁS">
+            </a>
+
+        </section>
+        <section id="episodios">
+            <div class="main-bg">
+                <h2>Episodios</h2>
+                <div class="spotifyFrames ">
+                    <iframe class="spotify-podcast " src="https://open.spotify.com/embed-podcast/show/2ySVrxGkN6n6frMTo9Nsrt " width="100% " height="232 " frameborder="0 " allowtransparency="true " allow="encrypted-media "> </iframe>
+                    <iframe class="spotify-podcast " src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby " width="100% " height="232 " frameborder="0 " allowtransparency="true " allow="encrypted-media "> </iframe>
+                    <iframe class="spotify-podcast " src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv " width="100% " height="232 " frameborder="0 " allowtransparency="true " allow="encrypted-media "> </iframe>
+                    <iframe class="spotify-podcast " src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn " width="100% " height="232 " frameborder="0 " allowtransparency="true " allow="encrypted-media "></iframe>
+                </div>
             </div>
         </section>
 
+        <div class="phone-venimos ">
+            <div class="phone-image " id="nosotros">
+                <img src="/images/phone.png " alt="hirstory-of-women-in-coding ">
+            </div>
+
+            <section class="de-donde-venimos ">
+                <h2>De dónde venimos</h2>
+                <p>
+                    Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light.
+                </p>
+                <p>
+                    Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.
+                </p>
+            </section>
+        </div>
+
+
+        <section class="invitados " id="entrevistas">
+            <h2>Invitadas/os estelares</h2>
+            <div class="images ">
+                <img src="/images/grace-hopper.png " alt="grace-hopper ">
+                <img src="/images/Katie-Bouman.png " alt="katie-bouman ">
+                <img src="/images/Margaret_Hamilton.png " alt="margaret-hamilton ">
+                <img src="/images/An E.R.A.Univac 1103 computer in the 1950s.png " alt="E.R.A.Univac 1103 ">
+                <img src="/images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png " alt="computer-operators ">
+                <img src="/images/susan-kare.png " alt="susan-kare ">
+            </div>
+        </section>
+
+        <section class="temas " id="topicos">
+            <h2>Algunos de nuestros temas</h2>
+            <div class="theme-list ">
+                <div class="theme ">
+                    <img src="/images/icon1.svg " alt="trabajo-remot0">
+                    <h3>Trabajo Remoto</h3>
+                </div>
+                <div class="theme ">
+                    <img src="/images/icon2.svg " alt="repensando-la-programacion">
+                    <h3>Repensando la programación</h3>
+                </div>
+                <div class="theme ">
+                    <img src="/images/icon3.svg " alt="baces-del-codigo">
+                    <h3>Bases del codigo</h3>
+                </div>
+                <div class="theme ">
+                    <img src="/images/icon4.svg " alt="seguridad-informatica">
+                    <h3>Seguridad informatica</h3>
+                </div>
+            </div>
+        </section>
         <section class="novedades">
             <h2>¿Querés las últimas novedades?</h2>
-            <input class="button" type="button" value="ESCUCHÁ LOS EPISODIOS">
+            <a href="#episodios">
+                <input class="button" type="button" value="ESCUCHÁ LOS EPISODIOS">
+            </a>
         </section>
     </main>
-
     <footer>
         <p>© 2019— Hello blue pale dot</p>
         <div class="social">
-            <i class="fa fa-spotify fa-lg"></i>
-            <i class="fa fa-instagram fa-lg"></i>
-            <i class="fa fa-twitter fa-lg"></i>
-            <i class="fa fa-facebook-official fa-lg"></i>
-            <i class="fa fa-telegram fa-lg"></i>
+            <a href="http://www.spotify.com"><i class="fa fa-spotify fa-lg"></i></a>
+            <a href="http://www.instagram.com"><i class="fa fa-instagram fa-lg"></i></a>
+            <a href="http://www.twitter.com"><i class="fa fa-twitter fa-lg"></i></a>
+            <a href="http://www.facebook.com"><i class="fa fa-facebook-official fa-lg"></i></a>
+            <a href="https://web.telegram.org"><i class="fa fa-telegram fa-lg"></i></a>
         </div>
     </footer>
 </body>
-
 
 </html>
