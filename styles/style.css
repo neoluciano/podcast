@@ -24,6 +24,10 @@ body {
     display: none;
 }
 
+#hamburguer-menu-x {
+    display: none;
+}
+
 .menu {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
@@ -36,18 +40,12 @@ body {
     margin-top: 0;
 }
 
-#chk-menu:checked~#header-menu>label>.hamburguer-menu>.bar1 {
-    -webkit-transform: rotate(-45deg) translate(-6px, 3px);
-    transform: rotate(-45deg) translate(-6px, 3px);
+#chk-menu:checked~#header-menu>#hamburguer-menu-x {
+    display: block;
 }
 
-#chk-menu:checked~#header-menu>label>.hamburguer-menu>.bar2 {
-    opacity: 0;
-}
-
-#chk-menu:checked~#header-menu>label>.hamburguer-menu>.bar3 {
-    -webkit-transform: rotate(45deg) translate(-4px, -4px);
-    transform: rotate(45deg) translate(-4px, -1px);
+#chk-menu:checked~#header-menu>#hamburguer-menu {
+    display: none;
 }
 
 .hamburguer-menu {
@@ -73,7 +71,8 @@ ul li {
     margin: 10px;
 }
 
-.bar1,
+
+/* .bar1,
 .bar2,
 .bar3 {
     width: 18px;
@@ -81,7 +80,7 @@ ul li {
     background-color: #333;
     margin: 3px 0px;
     transition: 0.4s;
-}
+} */
 
 h1 {
     font-family: 'IBM Plex Sans', sans-serif;
@@ -181,6 +180,9 @@ main {
 
 .spotify-podcast {
     margin-bottom: 10px;
+    width: 100%;
+    height: 232px;
+    border: 0;
 }
 
 .imagesInvitados {
@@ -302,7 +304,7 @@ footer {
         width: 36px;
         height: 36px;
     }
-    .hamburguer-menu {
+    #hamburguer-menu {
         display: none;
     }
     header {
