@@ -10,4 +10,6 @@ Se añadieron 2 breakpoints a traves de media queries en CSS para las resolucion
 El sitio se encuentra publicado en la siguiente URL publica:
 https://lucianopereyra.000webhostapp.com/
 
+URL del repositorio en GITHUB
+https://github.com/neoluciano/podcast
 
