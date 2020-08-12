@@ -1,128 +1,137 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
+body {
+    width: 100%;
+    margin: auto;
+}
 
-/*HEADER - MENU*/
+#header-menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
 
 #img-logo {
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
 }
 
-header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 10px 10px;
+#chk-menu {
+    display: none;
 }
 
 .menu {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 16px;
+    background: #0000EC;
+    transition: 0.5s;
+    margin-top: -300px;
 }
 
-#btn-menu {
-    display: none;
+#chk-menu:checked~.menu {
+    margin-top: 0;
+}
+
+#chk-menu:checked~#header-menu>label>.hamburguer-menu>.bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 3px);
+    transform: rotate(-45deg) translate(-6px, 3px);
+}
+
+#chk-menu:checked~#header-menu>label>.hamburguer-menu>.bar2 {
+    opacity: 0;
+}
+
+#chk-menu:checked~#header-menu>label>.hamburguer-menu>.bar3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -4px);
+    transform: rotate(45deg) translate(-4px, -1px);
 }
 
 .hamburguer-menu {
-    display: none;
     cursor: pointer;
 }
 
 .menu ul {
+    display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
+    padding: 5px;
+    flex-direction: column;
     transition: 0.4s;
 }
 
 ul a {
     text-decoration: none;
-    color: #060A24;
+    color: white;
     padding: 10px 15px;
 }
 
-ul a:hover {
-    color: #00F3BB;
-    text-decoration: line-through;
-}
-
-ul a:active {
-    text-decoration: line-through;
-    color: #060A24;
-    opacity: 56%;
+ul li {
+    margin: 10px;
 }
 
 .bar1,
 .bar2,
 .bar3 {
-    width: 35px;
-    height: 5px;
+    width: 18px;
+    height: 2px;
     background-color: #333;
-    margin: 6px 0;
+    margin: 3px 0px;
     transition: 0.4s;
-}
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-
-/* Fade out the second bar */
-
-.change .bar2 {
-    opacity: 0;
-}
-
-
-/* Rotate last bar */
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-}
-
-
-/*FIN HEADER -MENU*/
-
-p {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 16px;
 }
 
 h1 {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 64px;
+    font-size: 36px;
     color: #060A24;
-    /*revisar el line heigth porque la especificacion es otra*/
-    line-height: normal;
+    line-height: 42px;
+    margin-left: 5%;
+    margin-right: 25.6%;
+}
+
+h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    margin-left: 5%;
 }
 
 #world {
     text-decoration: line-through;
 }
 
-#dot {
-    color: #0000EC;
+p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    line-height: 22px;
+    padding-left: 5%;
+    padding-top: 0.3%;
+}
+
+.top p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.top p::before {
+    content: "Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
 }
 
 .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'IBM Plex Mono', monospace;
-    font-weight: lighter;
-    font-size: 18px;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
     color: #060A24;
     background: #00F3BB;
-    width: 226px;
-    height: 56px;
-    text-align: center;
+    width: 288px;
+    height: 48px;
     border: 0;
 }
 
@@ -131,46 +140,304 @@ h1 {
     color: #FFFFFF;
 }
 
-@media screen and (max-width:768px) {
-    header {
-        border: 1px solid red;
-        flex-wrap: wrap;
-        display: flex;
-        width: 98%;
-    }
-    #cont1 {
-        border: 1px solid blue;
-        display: flex;
-        justify-content: space-between;
+.top {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 65px;
+}
+
+main {
+    margin-top: 0.5%;
+    width: 100%;
+}
+
+.main-bg {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    margin-top: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    clip-path: polygon( 0% 5%, 100% 0, 100% 95%, 0 100%);
+    transition: all 0.5s;
+}
+
+.main-bg h2 {
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.spotifyFrames {
+    display: flex;
+    flex-direction: column;
+}
+
+.spotify-podcast {
+    margin-bottom: 10px;
+}
+
+.de-donde-venimos {
+    margin-top: 30px;
+    display: flex;
+    flex-flow: column;
+}
+
+.de-donde-venimos h2 {
+    margin-right: 5%;
+}
+
+.de-donde-venimos p {
+    margin-top: 10px;
+    margin-right: 5%;
+}
+
+.phone-image {
+    position: relative;
+    z-index: 9999;
+    margin-top: -100px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.phone-image img {
+    width: 320px;
+    height: 519px;
+}
+
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    color: #060A24;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.social {
+    font-size: 16px;
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.temas h2 {
+    color: #060A24;
+    text-align: left;
+    margin: 20px 0 0 20px;
+}
+
+.temas h3 {
+    color: #060A24;
+    font-size: 24px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.theme {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 30px;
+}
+
+.novedades {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    height: 341px;
+    clip-path: polygon( 0 15%, 100% 0%, 100% 100%, 0% 100%);
+    /*Un cuadrado seria:
+    0% 0%, vertice superior izquierdo (primer coordenada es el eje X, segunda el eje y)
+    100% 0%, vertice superior derecho
+    100% 100%, vertice inferior derecho
+    0% 100%, vertice inferior izquierdo
+    */
+}
+
+.novedades h2 {
+    color: #FFFFFF;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.invitados {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 45px;
+}
+
+.invitados img {
+    width: 100%;
+}
+
+.social i:hover {
+    transition: all 1s linear;
+    transform: scale(1.5, 1.5);
+}
+
+.social a {
+    color: #060A24;
+}
+
+@media screen and (min-width: 640px) {
+    #img-logo {
+        width: 36px;
+        height: 36px;
     }
     .hamburguer-menu {
-        display: inline;
+        display: none;
+    }
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding-left: 6.9%;
+        padding-right: 6.9%;
+        padding-top: 0.7%;
+        padding-bottom: 0.7%;
     }
     .menu {
-        background: #0000EC;
+        background: unset;
+        display: flex;
+        margin-top: 0;
     }
     .menu ul {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 0%;
+        flex-direction: row;
     }
     ul a {
-        color: #FFFFFF;
+        color: #060A24;
     }
-    #btn-menu:checked~.menu ul {
-        margin-top: 1%;
+    ul a:hover {
+        color: #00F3BB;
+        text-decoration: line-through;
     }
-    #btn-menu:checked~label>.hamburguer-menu>.bar1 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-        transform: rotate(-45deg) translate(-9px, 6px);
+    ul a:active {
+        text-decoration: line-through;
+        color: #060A24;
+        opacity: 56%;
     }
-    /* Fade out the second bar */
-    #btn-menu:checked~label>.hamburguer-menu>.bar2 {
-        opacity: 0;
+    .top {
+        align-items: flex-start;
+        justify-content: space-around;
+        margin-left: 13.9%;
     }
-    /* Rotate last bar */
-    #btn-menu:checked~label>.hamburguer-menu>.bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px);
-        transform: rotate(45deg) translate(-8px, -8px);
+    h1 {
+        font-size: 64px;
+        font-weight: normal;
+    }
+    #dot {
+        color: #0000EC;
+    }
+    .top p {
+        margin-right: 43.5%;
+    }
+    .top p::before {
+        content: "El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.";
+    }
+    .top .button {
+        margin-left: 60px;
+        width: 226px;
+        height: 56px;
+    }
+    .invitados h2 {
+        margin-bottom: 20px;
+        margin-left: 13.9%;
+    }
+    .images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    footer {
+        font-size: 16px;
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+    }
+    .social {
+        font-size: 18px;
+        justify-content: space-between;
+        width: 30%;
+    }
+    .temas {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+    }
+    .temas h2 {
+        margin-bottom: 30px;
+    }
+    .theme-list {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .main-bg h2 {
+        align-self: flex-start;
+        margin-left: 200px;
+    }
+    .main-bg {
+        padding-top: 50px;
+        padding-bottom: 200px;
+        clip-path: polygon( 0% 8%, 100% 0, 100% 85%, 0 100%);
+        transition: all 0.5s;
+        border: 1px solid black;
+        align-items: center;
+    }
+    .phone-venimos {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .phone-image img {
+        width: 457px;
+        height: 660px;
+        margin-top: -50px;
+    }
+    .de-donde-venimos {
+        width: 32.2%;
+        padding-left: 50px;
+    }
+    .de-donde-venimos h2 {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+    .de-donde-venimos p {
+        font-size: 16px;
+    }
+    .spotifyFrames {
+        display: grid;
+        grid-template-columns: 548px;
+        grid-template-rows: repeat(4, 232px);
+        grid-column-gap: 70px;
+        grid-row-gap: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .spotifyFrames {
+        display: grid;
+        grid-template-columns: repeat(2, 548px);
+        grid-template-rows: repeat(2, 232px);
+        grid-column-gap: 70px;
+        grid-row-gap: 50px;
+    }
+    .images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }
