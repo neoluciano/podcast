@@ -183,6 +183,11 @@ main {
     margin-bottom: 10px;
 }
 
+.imagesInvitados {
+    display: flex;
+    flex-flow: column wrap;
+}
+
 .de-donde-venimos {
     margin-top: 30px;
     display: flex;
@@ -356,7 +361,7 @@ footer {
         margin-bottom: 20px;
         margin-left: 13.9%;
     }
-    .images {
+    .imagesInvitados {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -435,7 +440,7 @@ footer {
         grid-column-gap: 70px;
         grid-row-gap: 50px;
     }
-    .images {
+    .imagesInvitados {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
